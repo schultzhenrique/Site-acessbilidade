@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade Digital para Todos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#conteudo-principal" class="pular-navegacao">Pular para o conteúdo principal</a>
+    
+    <header>
+        <div class="container">
+            <h1>Acessibilidade Digital para Todos</h1>
+            <p>Construindo uma web mais inclusiva, sem barreiras e para todas as pessoas.</p>
+        </div>
+    </header>
+
+    <nav aria-label="Navegação principal">
+        <div class="container">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#principios">Princípios WCAG</a></li>
+                <li><a href="#dicas">Dicas Práticas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="conteudo-principal" class="container">
+        <section id="sobre">
+            <h2>O que é Acessibilidade Digital?</h2>
+            <p>Acessibilidade digital significa garantir que aplicativos, sites e outras tecnologias digitais sejam projetados de forma que pessoas com qualquer tipo de deficiência (visual, auditiva, motora ou cognitiva) possam utilizá-los com autonomia.</p>
+        </section>
+
+        <section id="principios">
+            <h2>Princípios da Acessibilidade</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Perceptível</h3>
+                    <p>A interface não pode ser invisível para os sentidos do usuário. Exemplo: fornecer texto alternativo para imagens.</p>
+                </article>
+                <article class="card">
+                    <h3>Operável</h3>
+                    <p>Toda a navegação deve ser possível de ser realizada através do teclado, sem exigir interações impossíveis para o usuário.</p>
+                </article>
+                <article class="card">
+                    <h3>Compreensível</h3>
+                    <p>As informações e as ações devem ser claras e fáceis de entender. Textos simples e comportamento previsível do site.</p>
+                </article>
+                <article class="card">
+                    <h3>Robusto</h3>
+                    <p>O código deve ser limpo e bem estruturado para funcionar perfeitamente com tecnologias assistivas, como leitores de tela.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="dicas">
+            <h2>Dicas Práticas para Desenvolvedores</h2>
+            <ul class="lista-dicas">
+                <li>Sempre use o atributo <code>alt</code> para descrever imagens de forma clara.</li>
+                <li>Mantenha um alto contraste entre a cor do texto e o fundo da tela.</li>
+                <li>Use as tags HTML corretas para a estrutura correta (<code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>).</li>
+                <li>Garanta que todos os botões e links tenham o efeito de <strong>foco</strong> visual ao usar o botão "Tab" do teclado.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Acessibilidade Digital para Todos. Código aberto para aprendizado.</p>
+        </div>
+    </footer>
+</body>
+</html>
