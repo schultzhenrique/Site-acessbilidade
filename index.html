@@ -1,74 +1,197 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologia acessível para todos</title>
-    <link rel="stylesheet" href="estilo.css">
-</head>
-<body>
-    <a href="#conteudo-principal" class="pular-navegacao">Pular para o conteúdo principal</a>
-    
-    <header>
-        <div class="container">
-            <h1>Acessibilidade Digital para Todos</h1>
-            <p>Construindo uma web mais inclusiva, sem barreiras e para todas as pessoas.</p>
+<header class="header">
+
+  <a href="#" class="logo">
+    <span class="logo-icon">V</span>
+    Visio
+  </a>
+
+  <nav class="nav" aria-label="Navegação principal">
+    <a href="#inicio">Início</a>
+    <a href="#recursos">Recursos</a>
+    <a href="#funciona">Como funciona</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <a href="#contato" class="header-button">
+    Experimentar grátis →
+  </a>
+
+</header>
+
+
+<main>
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-container">
+
+      <div class="hero-content">
+
+        <div class="badge">
+          Acessibilidade digital para todos
         </div>
-    </header>
 
-    <nav aria-label="Navegação principal">
-        <div class="container">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#principios">Princípios WCAG</a></li>
-                <li><a href="#dicas">Dicas Práticas</a></li>
-            </ul>
+        <h1>
+          Tecnologia acessível
+          <span>para todos</span>
+        </h1>
+
+        <p class="hero-description">
+          O Visio adapta sites e aplicativos para pessoas com
+          baixa visão e deficiência visual — oferecendo mais
+          autonomia, segurança e independência digital.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#recursos" class="btn btn-primary">
+            Começar agora →
+          </a>
+
+          <a href="#funciona" class="btn btn-secondary">
+            Como funciona
+          </a>
+
         </div>
-    </nav>
 
-    <main id="conteudo-principal" class="container">
-        <section id="sobre">
-            <h2>O que é Acessibilidade Digital?</h2>
-            <p>Acessibilidade digital significa garantir que aplicativos, sites e outras tecnologias digitais sejam projetados de forma que pessoas com qualquer tipo de deficiência (visual, auditiva, motora ou cognitiva) possam utilizá-los com autonomia.</p>
-        </section>
+        <div class="hero-benefits">
 
-        <section id="principios">
-            <h2>Princípios da Acessibilidade</h2>
-            <div class="cards">
-                <article class="card">
-                    <h3>Ajuste automático de contraste</h3>
-                    <p>O Visio detecta automaticamente o nível de contraste da página e adapta cores, fundos e textos para garantir legibilidade máxima.</p>
-                </article>
-                <article class="card">
-                    <h3>Ampliação de textos e elementos</h3>
-                    <p>Aumente fontes, botões e imagens com um toque. O layout se adapta de forma inteligente sem quebrar a estrutura da página.</p>
-                </article>
-                <article class="card">
-                    <h3>Descrição de imagens com IA</h3>
-                    <p>Nossa inteligência artificial analisa imagens e gera descrições detalhadas em tempo real, tornando o conteúdo visual acessível a todos.</p>
-                </article>
-                <article class="card">
-                    <h3>Comandos de voz e tecnologias assistivas</h3>
-                    <p>Compatível com leitores de tela, navegação por teclado e controle por voz — integrado com NVDA, JAWS e VoiceOver.</p>
-                </article>
-            </div>
-        </section>
+          <span>WCAG 2.1 AAA</span>
+          <span>50 mil usuários</span>
+          <span>Gratuito para começar</span>
 
-        <section id="dicas">
-            <h2>Dicas Práticas para Desenvolvedores</h2>
-            <ul class="lista-dicas">
-                <li>Sempre use o atributo <code>alt</code> para descrever imagens de forma clara.</li>
-                <li>Mantenha um alto contraste entre a cor do texto e o fundo da tela.</li>
-                <li>Use as tags HTML corretas para a estrutura correta (<code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>).</li>
-                <li>Garanta que todos os botões e links tenham o efeito de <strong>foco</strong> visual ao usar o botão "Tab" do teclado.</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Acessibilidade Digital para Todos.</p>
         </div>
-    </footer>
-</body>
-</html>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <img
+          src="assets/visio.jpg"
+          alt="Mulher utilizando uma solução de tecnologia acessível"
+        >
+
+        <div class="accessibility-card">
+
+          <div class="accessibility-icon">
+            ◉
+          </div>
+
+          <div>
+            <strong>Contraste ajustado</strong>
+            <small>Nível AAA ativo</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="text-controls">
+
+      <span class="text-label">
+        TEXTO
+      </span>
+
+      <button class="text-button">
+        A+
+      </button>
+
+      <div class="text-indicator"></div>
+
+      <button class="text-button disabled">
+        A-
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <section class="features" id="recursos">
+
+    <div class="section-title">
+
+      <h2>
+        Recursos pensados para acessibilidade
+      </h2>
+
+      <p>
+        Ferramentas que tornam a experiência digital
+        mais simples, clara e independente.
+      </p>
+
+    </div>
+
+
+    <div class="features-grid">
+
+      <article class="feature-card">
+
+        <div class="feature-icon">
+          ◐
+        </div>
+
+        <h3>
+          Contraste inteligente
+        </h3>
+
+        <p>
+          Ajuste automático das cores para melhorar
+          a leitura e a visibilidade.
+        </p>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <div class="feature-icon">
+          A+
+        </div>
+
+        <h3>
+          Ampliação de conteúdo
+        </h3>
+
+        <p>
+          Aumente textos e elementos sem perder
+          a organização da página.
+        </p>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <div class="feature-icon">
+          ♫
+        </div>
+
+        <h3>
+          Comandos de voz
+        </h3>
+
+        <p>
+          Navegue e interaja utilizando comandos
+          de voz de forma intuitiva.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer id="contato">
+  <p>
+    © 2026 Visio — Tecnologia acessível para todos.
+  </p>
+</footer>
