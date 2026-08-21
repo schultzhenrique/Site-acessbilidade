@@ -1,10 +1,3 @@
-<div class="font-control-bar" aria-label="Controle de tamanho do texto">
-  <button id="btn-decrease" aria-label="Diminuir fonte">A-</button>
-  <button id="btn-reset" aria-label="Restaurar fonte padrão">A</button>
-  <button id="btn-increase" aria-label="Aumentar fonte">A+</button>
-</div>
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -30,8 +23,8 @@
         <ul>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#pilares">Pilares</a></li>
-          <li><a href="#recursos">Recursos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <!-- BOTÃO QUE ABRE O POPUP COM ARIA ATRIBUTOS COMPLETOS -->
+          <li><button id="btn-open-popup" class="btn-acessibilidade" aria-haspopup="dialog" aria-expanded="false" aria-controls="accessibility-popup">Acessibilidade</button></li>
         </ul>
       </nav>
     </div>
@@ -45,13 +38,38 @@
       <div class="container hero-container">
         <div class="hero-content">
           <h1>Acessibilidade Digital para Todos</h1>
-          <p>
+          <p class="readable-text">
             Construindo a web do futuro: inclusiva, navegável e funcional para todas as pessoas, independentemente de suas capacidades visuais, motoras ou cognitivas.
           </p>
           <div class="hero-actions">
             <a href="#pilares" class="btn btn-primary">Explorar Pilares</a>
             <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
+            <button class="btn-tts" aria-label="Ouvir texto da seção inicial em voz alta" title="Ouvir este parágrafo em áudio">🔊 Ouvir Texto</button>
           </div>
+        </div>
+        <div class="hero-image">
+          <img src="hero.jpg" alt="Ilustração vetorial minimalista em tons de azul com notebook, símbolo universal de acessibilidade e ondas de áudio de leitor de tela." class="responsive-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="section section-alt">
+      <div class="container sobre-container">
+        <div class="sobre-image">
+          <img src="sobre.jpg" alt="Desenho ilustrativo de um tablet com botões de controle de zoom, síntese de voz e tamanho de texto para acessibilidade." class="responsive-img">
+        </div>
+        <div class="sobre-content">
+          <div class="section-title-bar">
+            <h2>Sobre a Acessibilidade Web</h2>
+            <button class="btn-tts" aria-label="Ouvir texto da seção Sobre em voz alta" title="Ouvir esta seção em áudio">🔊 Ouvir Seção</button>
+          </div>
+          <p class="readable-text">
+            A acessibilidade na web garante que todas as pessoas possam perceber, compreender, navegar e interagir de forma autônoma e eficiente em ambientes digitais.
+          </p>
+          <p class="readable-text">
+            Alinhados com as diretrizes <strong>WCAG (Web Content Accessibility Guidelines)</strong> da W3C, desenvolvemos soluções focadas na inclusão de usuários de leitores de tela, ampliações de texto e navegação adaptada por teclado.
+          </p>
         </div>
       </div>
     </section>
@@ -59,32 +77,46 @@
     <!-- Seção Pilares WCAG -->
     <section id="pilares" class="section">
       <div class="container">
-        <h2>Os 4 Pilares da Acessibilidade (WCAG)</h2>
-        <p class="section-desc">Princípios fundamentais para criar interfaces acessíveis.</p>
+        <div class="section-title-bar center-title">
+          <h2>Os 4 Pilares da Acessibilidade (WCAG)</h2>
+        </div>
+        <p class="section-desc readable-text">Princípios fundamentais para criar interfaces acessíveis.</p>
 
         <div class="card-grid">
           <article class="card">
-            <div class="card-icon" aria-hidden="true">👁️</div>
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">👁️</div>
+              <button class="btn-tts-icon" aria-label="Ouvir pilar 1: Perceptível em voz alta" title="Ouvir pilar Perceptível">🔊 Ouvir</button>
+            </div>
             <h3>1. Perceptível</h3>
-            <p>As informações e os componentes da interface devem ser apresentados aos usuários de formas que eles possam perceber.</p>
+            <p class="readable-text">As informações e os componentes da interface devem ser apresentados aos usuários de formas que eles possam perceber.</p>
           </article>
 
           <article class="card">
-            <div class="card-icon" aria-hidden="true">⌨️</div>
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">⌨️</div>
+              <button class="btn-tts-icon" aria-label="Ouvir pilar 2: Operável em voz alta" title="Ouvir pilar Operável">🔊 Ouvir</button>
+            </div>
             <h3>2. Operável</h3>
-            <p>Os componentes de interface e a navegação devem ser operáveis por teclado e outras tecnologias assistivas.</p>
+            <p class="readable-text">Os componentes de interface e a navegação devem ser operáveis por teclado e outras tecnologias assistivas.</p>
           </article>
 
           <article class="card">
-            <div class="card-icon" aria-hidden="true">🧠</div>
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🧠</div>
+              <button class="btn-tts-icon" aria-label="Ouvir pilar 3: Compreensível em voz alta" title="Ouvir pilar Compreensível">🔊 Ouvir</button>
+            </div>
             <h3>3. Compreensível</h3>
-            <p>As informações e a operação da interface do usuário devem ser claras, previsíveis e fáceis de entender.</p>
+            <p class="readable-text">As informações e a operação da interface do usuário devem ser claras, previsíveis e fáceis de entender.</p>
           </article>
 
           <article class="card">
-            <div class="card-icon" aria-hidden="true">⚙️</div>
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">⚙️</div>
+              <button class="btn-tts-icon" aria-label="Ouvir pilar 4: Robusto em voz alta" title="Ouvir pilar Robusto">🔊 Ouvir</button>
+            </div>
             <h3>4. Robusto</h3>
-            <p>O conteúdo deve ser robusto o suficiente para ser interpretado por uma ampla variedade de agentes e dispositivos.</p>
+            <p class="readable-text">O conteúdo deve ser robusto o suficiente para ser interpretado por uma ampla variedade de agentes e dispositivos.</p>
           </article>
         </div>
       </div>
@@ -95,9 +127,61 @@
   <!-- Rodapé -->
   <footer class="footer">
     <div class="container footer-container">
-      <p>&copy; 2026 Acessibilidade Digital para Todos. Desenvolvido com padrões Web (W3C).</p>
+      <p class="readable-text">&copy; 2026 Acessibilidade Digital para Todos. Desenvolvido com padrões Web (W3C).</p>
     </div>
   </footer>
+
+  <!-- ============================================================== -->
+  <!-- POPUP (DIALOG) DE ACESSIBILIDADE - INSERIDO NO FINAL DA PÁGINA -->
+  <!-- ============================================================== -->
+  <dialog id="accessibility-popup" aria-labelledby="popup-title">
+    <div class="popup-header">
+      <h2 id="popup-title">Configurações de Acessibilidade</h2>
+      <button id="btn-close-popup" aria-label="Fechar configurações de acessibilidade" title="Fechar configurações">✖</button>
+    </div>
+    
+    <div class="popup-body">
+      <!-- Controle de Fonte -->
+      <div class="popup-section">
+        <div class="font-control-header">
+          <p id="font-control-label">Tamanho do texto:</p>
+          <span id="font-size-indicator" class="font-size-indicator" aria-hidden="true">100%</span>
+        </div>
+        
+        <div class="font-control-bar" role="group" aria-labelledby="font-control-label">
+          <button id="btn-decrease" aria-label="Diminuir tamanho da fonte" title="Diminuir tamanho da fonte (Atalho: Alt + -)">A-</button>
+          <button id="btn-reset" aria-label="Restaurar tamanho de fonte padrão" title="Restaurar fonte padrão (Atalho: Alt + 0)">A</button>
+          <button id="btn-increase" aria-label="Aumentar tamanho da fonte" title="Aumentar tamanho da fonte (Atalho: Alt + +)">A+</button>
+        </div>
+      </div>
+
+      <hr class="popup-divider">
+
+      <!-- Controle de Voz de Locutor (Sintetizador) -->
+      <div class="popup-section">
+        <p id="tts-control-label" class="popup-section-title">🔊 Voz de Locutor (Leitor de Texto):</p>
+        <div class="tts-global-controls">
+          <button id="btn-tts-read-page" class="btn-tts-global" aria-label="Iniciar leitura de toda a página em áudio" title="Ouvir página completa (Atalho: Alt + V)">▶️ Ouvir Página</button>
+          <button id="btn-tts-stop" class="btn-tts-global btn-tts-stop" aria-label="Parar leitura em voz alta" title="Parar leitura" disabled>⏹️ Parar</button>
+        </div>
+        <div class="tts-speed-control">
+          <label for="tts-speed-select">Velocidade da voz:</label>
+          <select id="tts-speed-select" aria-label="Selecionar velocidade da leitura de voz">
+            <option value="0.8">0.8x (Lenta)</option>
+            <option value="1" selected>1.0x (Normal)</option>
+            <option value="1.25">1.25x (Rápida)</option>
+            <option value="1.5">1.5x (Muito Rápida)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Região para anúncios de Leitores de Tela -->
+  <div id="accessibility-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Link correto para o script main.js -->
+  <script src="main.js"></script>
 
 </body>
 </html>
