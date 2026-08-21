@@ -219,3 +219,33 @@ input:focus-visible {
     flex-direction: column;
   }
 }
+/* Defina a fonte do HTML em porcentagem para manter a acessibilidade */
+html {
+  font-size: 100%; /* Equivalente a 16px por padrão */
+  transition: font-size 0.2s ease;
+}
+
+/* Os textos do site devem usar a unidade 'rem' */
+body {
+  font-size: 1rem; /* Pega a fonte do html */
+}
+
+/* Estilo dos botões */
+.font-control-bar button {
+  background-color: #ffffff;
+  color: #0d47a1;
+  border: 2px solid #0d47a1;
+  padding: 6px 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.font-control-bar button:hover {
+  background-color: #0d47a1;
+  color: #ffffff;
+}
+
+.font-control-bar button:focus-visible {
+  outline: 3px solid #0284c7;
+}
