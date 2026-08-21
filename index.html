@@ -1,74 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acessibilidade Digital para Todos</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessibilidade Digital para Todos</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <a href="#conteudo-principal" class="pular-navegacao">Pular para o conteúdo principal</a>
+
+  <!-- Atalho para navegação por teclado (Leitores de Tela / Tab) -->
+  <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="#" aria-label="Acessibilidade Digital - Página Inicial">
+          <span class="logo-bold">Acessibilidade</span><span class="logo-light">Digital</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Navegação Principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#pilares">Pilares</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="main-content">
     
-    <header>
-        <div class="container">
-            <h1>Acessibilidade Digital para Todos</h1>
-            <p>Construindo uma web mais inclusiva, sem barreiras e para todas as pessoas.</p>
+    <!-- Seção Hero -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>Acessibilidade Digital para Todos</h1>
+          <p>
+            Construindo a web do futuro: inclusiva, navegável e funcional para todas as pessoas, independentemente de suas capacidades visuais, motoras ou cognitivas.
+          </p>
+          <div class="hero-actions">
+            <a href="#pilares" class="btn btn-primary">Explorar Pilares</a>
+            <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <nav aria-label="Navegação principal">
-        <div class="container">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#principios">Princípios WCAG</a></li>
-                <li><a href="#dicas">Dicas Práticas</a></li>
-            </ul>
+    <!-- Seção Pilares WCAG -->
+    <section id="pilares" class="section">
+      <div class="container">
+        <h2>Os 4 Pilares da Acessibilidade (WCAG)</h2>
+        <p class="section-desc">Princípios fundamentais para criar interfaces acessíveis.</p>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">👁️</div>
+            <h3>1. Perceptível</h3>
+            <p>As informações e os componentes da interface devem ser apresentados aos usuários de formas que eles possam perceber.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">⌨️</div>
+            <h3>2. Operável</h3>
+            <p>Os componentes de interface e a navegação devem ser operáveis por teclado e outras tecnologias assistivas.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🧠</div>
+            <h3>3. Compreensível</h3>
+            <p>As informações e a operação da interface do usuário devem ser claras, previsíveis e fáceis de entender.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">⚙️</div>
+            <h3>4. Robusto</h3>
+            <p>O conteúdo deve ser robusto o suficiente para ser interpretado por uma ampla variedade de agentes e dispositivos.</p>
+          </article>
         </div>
-    </nav>
+      </div>
+    </section>
 
-    <main id="conteudo-principal" class="container">
-        <section id="sobre">
-            <h2>O que é Acessibilidade Digital?</h2>
-            <p>Acessibilidade digital significa garantir que aplicativos, sites e outras tecnologias digitais sejam projetados de forma que pessoas com qualquer tipo de deficiência (visual, auditiva, motora ou cognitiva) possam utilizá-los com autonomia.</p>
-        </section>
+  </main>
 
-        <section id="principios">
-            <h2>Princípios da Acessibilidade</h2>
-            <div class="cards">
-                <article class="card">
-                    <h3>Perceptível</h3>
-                    <p>A interface não pode ser invisível para os sentidos do usuário. Exemplo: fornecer texto alternativo para imagens.</p>
-                </article>
-                <article class="card">
-                    <h3>Operável</h3>
-                    <p>Toda a navegação deve ser possível de ser realizada através do teclado, sem exigir interações impossíveis para o usuário.</p>
-                </article>
-                <article class="card">
-                    <h3>Compreensível</h3>
-                    <p>As informações e as ações devem ser claras e fáceis de entender. Textos simples e comportamento previsível do site.</p>
-                </article>
-                <article class="card">
-                    <h3>Robusto</h3>
-                    <p>O código deve ser limpo e bem estruturado para funcionar perfeitamente com tecnologias assistivas, como leitores de tela.</p>
-                </article>
-            </div>
-        </section>
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Acessibilidade Digital para Todos. Desenvolvido com padrões Web (W3C).</p>
+    </div>
+  </footer>
 
-        <section id="dicas">
-            <h2>Dicas Práticas para Desenvolvedores</h2>
-            <ul class="lista-dicas">
-                <li>Sempre use o atributo <code>alt</code> para descrever imagens de forma clara.</li>
-                <li>Mantenha um alto contraste entre a cor do texto e o fundo da tela.</li>
-                <li>Use as tags HTML corretas para a estrutura correta (<code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>).</li>
-                <li>Garanta que todos os botões e links tenham o efeito de <strong>foco</strong> visual ao usar o botão "Tab" do teclado.</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Acessibilidade Digital para Todos. Código aberto para aprendizado.</p>
-        </div>
-    </footer>
 </body>
 </html>
