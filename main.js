@@ -1,29 +1,46 @@
 <body>
 <script>
-  let currentZoom = 100;
-  const step = 10; // Porcentagem de aumento/diminuição a cada clique
-  const maxZoom = 140; // Limite máximo de 140%
-  const minZoom = 80;  // Limite mínimo de 80%
+document.addEventListener('DOMContentLoaded', () => {
+  let tamanhoPorcentagem = 100;
+  const limiteMinimo = 70;
+  const limiteMaximo = 150;
+  const passo = 10;
 
-  const htmlElement = document.documentElement;
+  const btnAumentar = document.getElementById('btn-aumentar');
+  const btnDiminuir = document.getElementById('btn-diminuir');
+  const btnResetar = document.getElementById('btn-resetar');
 
-  document.getElementById('btn-increase').addEventListener('click', () => {
-    if (currentZoom < maxZoom) {
-      currentZoom += step;
-      htmlElement.style.fontSize = `${currentZoom}%`;
-    }
-  });
+  function atualizarFonte() {
+    // Altera a raiz para CSS que usa 'rem'
+    document.documentElement.style.fontSize = `${tamanhoPorcentagem}%`;
+    // Altera o body para garantir funcionamento mesmo em CSS que usa 'px'
+    document.body.style.fontSize = `${(tamanhoPorcentagem / 100) * 16}px`;
+  }
 
-  document.getElementById('btn-decrease').addEventListener('click', () => {
-    if (currentZoom > minZoom) {
-      currentZoom -= step;
-      htmlElement.style.fontSize = `${currentZoom}%`;
-    }
-  });
+  if (btnAumentar) {
+    btnAumentar.addEventListener('click', () => {
+      if (tamanhoPorcentagem < limiteMaximo) {
+        tamanhoPorcentagem += passo;
+        atualizarFonte();
+      }
+    });
+  }
 
-  document.getElementById('btn-reset').addEventListener('click', () => {
-    currentZoom = 100;
-    htmlElement.style.fontSize = '100%';
-  });
+  if (btnDiminuir) {
+    btnDiminuir.addEventListener('click', () => {
+      if (tamanhoPorcentagem > limiteMinimo) {
+        tamanhoPorcentagem -= passo;
+        atualizarFonte();
+      }
+    });
+  }
+
+  if (btnResetar) {
+    btnResetar.addEventListener('click', () => {
+      tamanhoPorcentagem = 100;
+      atualizarFonte();
+    });
+  }
+});
 </script>
 </body>
