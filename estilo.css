@@ -249,3 +249,11 @@ body {
 .font-control-bar button:focus-visible {
   outline: 3px solid #0284c7;
 }
+/* CORRETO - Responde ao clique */
+p {
+  font-size: 1rem; /* 1rem = tamanho padrão */
+}
+
+h1 {
+  font-size: 2rem; /* 2x o tamanho padrão */
+}
